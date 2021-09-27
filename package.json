@@ -8,6 +8,8 @@
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
   "dependencies": {
+    "@fontsource/lato": "4.5.0",
+    "@fontsource/noto-sans-jp": "4.5.1",
     "autoprefixer": "10.3.6",
     "gatsby": "3.13.1",
     "gatsby-plugin-feed": "3.13.0",

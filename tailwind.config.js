@@ -13,9 +13,11 @@ module.exports = {
       },
     },
   },
-  darkMode: true, // or 'media' or 'class'
+  darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    fontFamily: {
+      DEFAULT: ['Lato', 'Noto Sans JP', 'san-serif'],
+    },
   },
   variants: {
     extend: {},
