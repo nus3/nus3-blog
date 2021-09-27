@@ -16,6 +16,7 @@
     "gatsby-plugin-offline": "4.13.0",
     "gatsby-plugin-react-helmet": "4.13.0",
     "gatsby-plugin-sharp": "3.13.0",
+    "gatsby-plugin-typegen": "2.2.4",
     "gatsby-remark-copy-linked-files": "4.10.0",
     "gatsby-remark-images": "5.10.0",
     "gatsby-remark-prismjs": "5.10.0",
@@ -32,6 +33,7 @@
     "typeface-montserrat": "0.0.75"
   },
   "devDependencies": {
+    "@types/react-helmet": "6.1.2",
     "prettier": "2.4.1",
     "typescript": "4.4.3"
   },
