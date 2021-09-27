@@ -10,6 +10,7 @@
     "source.fixAll": true
   },
   "cSpell.words": [
-      "typegen"
+    "frontmatter",
+    "typegen"
   ]
 }

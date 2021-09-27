@@ -1,12 +1,15 @@
 // HACK:(nus3) Reactをimportしたくない
-import * as React from "react"
-import { Link, graphql, PageProps } from "gatsby"
+import * as React from 'react'
+import { Link, graphql, PageProps } from 'gatsby'
 
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import Seo from "../components/seo"
+import Bio from '../components/bio'
+import Layout from '../components/layout'
+import Seo from '../components/seo'
 
-const BlogIndex: React.FC<PageProps<GatsbyTypes.BlogIndexQuery>> = ({ data, location }) => {
+const BlogIndex: React.FC<PageProps<GatsbyTypes.BlogIndexQuery>> = ({
+  data,
+  location,
+}) => {
   const siteTitle = data?.site?.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
 
@@ -29,7 +32,7 @@ const BlogIndex: React.FC<PageProps<GatsbyTypes.BlogIndexQuery>> = ({ data, loca
       <Seo title="All posts" />
       <Bio />
       <ol style={{ listStyle: `none` }}>
-        {posts.map(post => {
+        {posts.map((post) => {
           const title = post.frontmatter?.title || post.fields!.slug!
 
           return (

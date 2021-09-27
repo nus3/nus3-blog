@@ -1,6 +1,6 @@
-import * as React from "react"
-import { Link } from "gatsby"
-import { WindowLocation } from "@reach/router"
+import * as React from 'react'
+import { Link } from 'gatsby'
+import { WindowLocation } from '@reach/router'
 
 type LayoutProps = {
   title: string

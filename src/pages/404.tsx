@@ -1,10 +1,13 @@
-import * as React from "react"
-import { graphql, PageProps } from "gatsby"
+import * as React from 'react'
+import { graphql, PageProps } from 'gatsby'
 
-import Layout from "../components/layout"
-import Seo from "../components/seo"
+import Layout from '../components/layout'
+import Seo from '../components/seo'
 
-const NotFoundPage:React.FC<PageProps<GatsbyTypes.NotFoundQuery>> = ({ data, location }) => {
+const NotFoundPage: React.FC<PageProps<GatsbyTypes.NotFoundQuery>> = ({
+  data,
+  location,
+}) => {
   const siteTitle = data?.site?.siteMetadata?.title || '404 Error'
 
   return (
