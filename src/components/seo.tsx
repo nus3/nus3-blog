@@ -92,6 +92,7 @@ Seo.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   // HACK:(nus3) 型定義する
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
