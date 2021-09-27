@@ -34,6 +34,7 @@
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-helmet": "6.1.0",
+    "react-icons": "4.2.0",
     "tailwindcss": "2.2.16",
     "typeface-merriweather": "0.0.72",
     "typeface-montserrat": "0.0.75"
@@ -65,6 +66,7 @@
     "setup": "yarn --frozen-lockfile --ignore-optional",
     "build": "gatsby build",
     "develop": "gatsby develop",
+    "develop:host": "gatsby develop -H 0.0.0.0",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "gatsby develop",
     "serve": "gatsby serve",
