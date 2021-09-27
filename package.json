@@ -40,6 +40,8 @@
     "eslint-config-prettier": "8.3.0",
     "eslint-plugin-react": "^7.26.0",
     "gatsby-plugin-eslint": "4.0.0",
+    "husky": "7.0.2",
+    "lint-staged": "11.1.2",
     "prettier": "2.4.1",
     "typescript": "4.4.3"
   },
@@ -62,6 +64,13 @@
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
     "typecheck": "tsc",
-    "lint:src": "eslint src --ext ts --ext tsx --max-warnings 0"
+    "lint:src": "eslint src --ext ts --ext tsx --max-warnings 0",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint --max-warnings 0",
+      "prettier --write"
+    ]
   }
 }
