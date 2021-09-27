@@ -1,0 +1,20 @@
+.container {
+  @apply flex flex-col items-center min-h-screen pb-16 bg-bgBase;
+}
+
+.header {
+  @apply flex items-center w-full h-16 p-2 pl-6 mb-5;
+}
+
+.headerTitle {
+  @apply text-4xl text-primary font-bold;
+}
+
+.mainContainer {
+  @apply flex flex-col items-center w-full px-8 md:px-16 lg:px-20;
+}
+
+.footer {
+  bottom: 0;
+  @apply fixed flex items-center justify-center w-full h-16 p-2 pl-6 bg-bgHeader;
+}

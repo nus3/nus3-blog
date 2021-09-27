@@ -18,6 +18,13 @@ module.exports = {
     fontFamily: {
       DEFAULT: ['Lato', 'Noto Sans JP', 'san-serif'],
     },
+    colors: {
+      primary: '#00ADB5',
+      accentYellow: '#FFD369',
+      bgBase: '#222831',
+      bgHeader: '#393E46',
+      textBase: '#EEEEEE',
+    },
   },
   variants: {
     extend: {},
