@@ -19,7 +19,8 @@ module.exports = {
       DEFAULT: ['Lato', 'Noto Sans JP', 'san-serif'],
     },
     colors: {
-      primary: '#00ADB5',
+      primary: '#4ECCA3',
+      primaryLight: '#ABF1DA',
       accentYellow: '#FFD369',
       bgBase: '#222831',
       bgHeader: '#393E46',

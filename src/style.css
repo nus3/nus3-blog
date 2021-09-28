@@ -4,6 +4,6 @@
 
 @layer base {
   body {
-    @apply font text-textBase;
+    @apply font text-textBase bg-bgBase;
   }
 }
