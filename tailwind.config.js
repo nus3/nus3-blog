@@ -13,9 +13,19 @@ module.exports = {
       },
     },
   },
-  darkMode: true, // or 'media' or 'class'
+  darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    fontFamily: {
+      DEFAULT: ['Lato', 'Noto Sans JP', 'san-serif'],
+    },
+    colors: {
+      primary: '#4ECCA3',
+      primaryLight: '#ABF1DA',
+      accentYellow: '#FFD369',
+      bgBase: '#222831',
+      bgHeader: '#393E46',
+      textBase: '#EEEEEE',
+    },
   },
   variants: {
     extend: {},
