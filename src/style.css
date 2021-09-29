@@ -7,3 +7,19 @@
     @apply font text-textBase bg-bgBase;
   }
 }
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* シンタックスハイライトのstyle */
+.gatsby-highlight {
+  @apply mb-7;
+}

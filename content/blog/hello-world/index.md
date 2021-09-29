@@ -1,10 +1,11 @@
 ---
-title: Hello World
-date: '2015-05-01T22:12:03.284Z'
-description: 'Hello World'
+title: スタイリング確認用
+date: '2021-09-29'
+description: '記事のスタイリングを確認するためのものです。気にしないでください'
 ---
 
-This is my first post on my new fake blog! How exciting!
+この記事は[gatsby-starter-blog](https://www.gatsbyjs.com/starters/gatsbyjs/gatsby-starter-blog)からnus3が意図した通りにスタイリングを調整できてるか確認するためのものです。  
+気にしないでください
 
 I'm sure I'll write a lot more interesting things in the future.
 
@@ -25,6 +26,7 @@ You can also write code blocks here!
 
 ```js
 const saltyDuckEgg = 'chinese preserved food product'
+const foo = 'foo'
 ```
 
 | Number | Title                                    | Year |
@@ -143,8 +145,8 @@ This is a paragraph.
 ```
 
 1. Buy flour and salt
-1. Mix together with water
-1. Bake
+2. Mix together with water
+3. Bake
 
 ```markdown
 1. Buy flour and salt
@@ -226,6 +228,6 @@ This paragraph has some `code` in it.
 
     This paragraph has some `code` in it.
 
-![Alt Text](https://placehold.it/200x50 'Image Title')
+![Alt Text](./salty_egg.jpg 'Image Title')
 
-    ![Alt Text](https://placehold.it/200x50 "Image Title")
+    ![Alt Text](./salty_egg.jpg "Image Title")

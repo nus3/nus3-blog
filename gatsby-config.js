@@ -6,7 +6,7 @@ module.exports = {
       summary: `そふとうぇあえんじにあ`,
     },
     description: `nus3のブログです`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    siteUrl: `https://nus3.com/`,
     social: {
       twitter: `YotaHada3`,
     },
@@ -112,15 +112,15 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `nus3 Blog`,
+        short_name: `nus3`,
         start_url: `/`,
-        background_color: `#ffffff`,
+        background_color: `#222831`,
         // This will impact how browsers show your PWA/website
         // https://css-tricks.com/meta-theme-color-and-trickery/
         // theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/profile-pic.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-react-helmet`,
