@@ -2,6 +2,7 @@ import * as React from 'react'
 import { Link } from 'gatsby'
 import { WindowLocation } from '@reach/router'
 import { FaTwitter, FaGithubAlt } from 'react-icons/fa'
+import { StaticImage } from 'gatsby-plugin-image'
 
 import * as styles from './styles.module.css'
 
@@ -57,6 +58,16 @@ export const Layout: React.FC<LayoutProps> = ({
       <main className={styles.mainContainer}>{children}</main>
       <footer className={styles.footer}>
         © {new Date().getFullYear()} nus3 Blog
+        <StaticImage
+          className="bio-avatar"
+          layout="fixed"
+          formats={['auto', 'webp', 'avif']}
+          src="../../images/profile-pic.png"
+          width={35}
+          height={35}
+          quality={95}
+          alt="Profile picture"
+        />
       </footer>
     </div>
   )

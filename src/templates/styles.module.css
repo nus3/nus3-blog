@@ -36,19 +36,19 @@
   }
 
   h1 {
-    @apply text-4xl;
+    @apply text-2xl md:text-4xl;
   }
   h2 {
-    @apply text-3xl;
+    @apply text-xl md:text-3xl;
   }
   h3 {
-    @apply text-2xl;
+    @apply text-lg md:text-2xl;
   }
   h4 {
-    @apply text-xl;
+    @apply md:text-xl;
   }
   h5 {
-    @apply text-lg;
+    @apply md:text-lg;
   }
 
   h1 > a {
@@ -127,5 +127,10 @@
     &:focus {
       @apply text-primaryLight;
     }
+  }
+
+  /* HACK:(nus3) シンタックスハイライトにはoverflowを効かせたい */
+  pre > code {
+    @apply whitespace-pre-wrap;
   }
 }

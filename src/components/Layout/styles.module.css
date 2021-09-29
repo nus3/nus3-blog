@@ -32,10 +32,11 @@
 
 .mainContainer {
   grid-area: main;
-  @apply flex flex-col items-center w-full px-8 md:px-16 lg:px-20;
+  @apply flex flex-col items-center w-full px-8 md:px-16 lg:px-20 pb-24;
 }
 
 .footer {
   grid-area: footer;
-  @apply flex items-center justify-center w-full h-16 p-2;
+  bottom: 0;
+  @apply fixed flex items-center justify-center gap-2 w-full h-16 p-8 bg-bgBase;
 }
