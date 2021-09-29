@@ -1,6 +1,6 @@
 ---
 title: Hello World
-date: '2015-05-01T22:12:03.284Z'
+date: '2021-09-29'
 description: 'Hello World'
 ---
 
@@ -23,8 +23,9 @@ Oh, and here's a great quote from this Wikipedia on
 
 You can also write code blocks here!
 
-```js
+```typescript
 const saltyDuckEgg = 'chinese preserved food product'
+const foo = 'foo'
 ```
 
 | Number | Title                                    | Year |
@@ -143,8 +144,8 @@ This is a paragraph.
 ```
 
 1. Buy flour and salt
-1. Mix together with water
-1. Bake
+2. Mix together with water
+3. Bake
 
 ```markdown
 1. Buy flour and salt
@@ -226,6 +227,6 @@ This paragraph has some `code` in it.
 
     This paragraph has some `code` in it.
 
-![Alt Text](https://placehold.it/200x50 'Image Title')
+![Alt Text](https://dummyimage.com/600x400/000/fff 'Image Title')
 
-    ![Alt Text](https://placehold.it/200x50 "Image Title")
+    ![Alt Text](https://dummyimage.com/600x400/000/fff "Image Title")

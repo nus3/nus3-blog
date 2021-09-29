@@ -83,7 +83,7 @@ const Seo: React.FC<SeoProps> = ({ description, lang, meta, title }) => {
 }
 
 Seo.defaultProps = {
-  lang: `en`,
+  lang: `jp`,
   meta: [],
   description: ``,
 }

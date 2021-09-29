@@ -9,7 +9,7 @@
 
 .header {
   grid-area: header;
-  @apply fixed flex items-center justify-between w-full h-16 p-2 px-5 sm:px-10 bg-bgHeader;
+  @apply fixed flex items-center justify-between w-full h-16 p-2 px-5 sm:px-10 bg-bgHeader z-10;
 }
 
 .headerTitle {
@@ -37,6 +37,5 @@
 
 .footer {
   grid-area: footer;
-  bottom: 0;
-  @apply fixed flex items-center justify-center w-full h-16 p-2;
+  @apply flex items-center justify-center w-full h-16 p-2;
 }

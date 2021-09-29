@@ -1,0 +1,131 @@
+.article {
+  @apply flex flex-col gap-10 pt-10 max-w-4xl;
+}
+
+.header {
+  @apply flex flex-col gap-1;
+}
+
+.headerTitle {
+  @apply text-3xl md:text-5xl font-bold;
+}
+
+.date {
+  @apply flex gap-1 items-center text-textDark;
+}
+
+.link {
+  transition: color 0.3s ease;
+  @apply flex gap-1 items-center text-primary;
+
+  &:hover {
+    @apply text-primaryLight;
+  }
+}
+
+/* --------------------  以下markdownのスタイル  -------------------- */
+.articleContent {
+  /* Heading */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply mt-12 mb-6 font-bold;
+  }
+
+  h1 {
+    @apply text-4xl;
+  }
+  h2 {
+    @apply text-3xl;
+  }
+  h3 {
+    @apply text-2xl;
+  }
+  h4 {
+    @apply text-xl;
+  }
+  h5 {
+    @apply text-lg;
+  }
+
+  h1 > a {
+    color: inherit;
+    @apply no-underline;
+  }
+  h2 > a,
+  h3 > a,
+  h4 > a,
+  h5 > a,
+  h6 > a {
+    color: inherit;
+    @apply no-underline;
+  }
+
+  hr {
+    height: 1px;
+    border: 0;
+    @apply bg-textBase my-2;
+  }
+
+  /* Prose */
+  p {
+    @apply leading-7 mb-7 p-0;
+  }
+
+  ul,
+  ol {
+    @apply mx-0 mb-8 p-0 list-outside;
+  }
+  ul {
+    @apply list-disc;
+  }
+  ol {
+    @apply list-decimal;
+  }
+  ul li,
+  ol li {
+    @apply mb-4 pl-0;
+  }
+  li > p {
+    @apply mb-4;
+  }
+  li *:last-child {
+    @apply mb-0;
+  }
+  li > ul {
+    @apply ml-8 mt-4;
+  }
+
+  blockquote {
+    @apply text-textDark mr-8 mb-8 pl-6  border-l-4 border-accentYellow text-lg italic;
+  }
+  blockquote > :last-child {
+    @apply mb-0;
+  }
+  blockquote > ul,
+  blockquote > ol {
+    @apply list-inside;
+  }
+
+  table {
+    border-spacing: 0.25rem;
+    @apply w-full mb-8 border-collapse;
+  }
+  table thead tr th {
+    @apply border-b border-textBase text-xl;
+  }
+
+  /* Link */
+  a {
+    transition: color 0.3s ease;
+    @apply text-primary underline;
+
+    &:hover,
+    &:focus {
+      @apply text-primaryLight;
+    }
+  }
+}

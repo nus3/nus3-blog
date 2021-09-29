@@ -1,15 +1,17 @@
 import * as React from 'react'
 import { Link, graphql, PageProps } from 'gatsby'
+import { FaArrowCircleLeft } from 'react-icons/fa'
+import { BsCalendarFill } from 'react-icons/bs'
 
-import Bio from '../components/bio'
 import { Layout } from '../components/Layout'
 import Seo from '../components/seo'
+
+import * as styles from './styles.module.css'
 
 const BlogPostTemplate: React.FC<PageProps<GatsbyTypes.BlogPostBySlugQuery>> =
   ({ data, location }) => {
     const post = data.markdownRemark
     const siteTitle = data.site?.siteMetadata?.title || `Title`
-    const { previous, next } = data
 
     return (
       <Layout location={location} title={siteTitle}>
@@ -18,49 +20,31 @@ const BlogPostTemplate: React.FC<PageProps<GatsbyTypes.BlogPostBySlugQuery>> =
           description={post!.frontmatter?.description || post!.excerpt}
         />
         <article
-          className="blog-post"
+          className={styles.article}
           itemScope
           itemType="http://schema.org/Article"
         >
-          <header>
-            <h1 itemProp="headline">{post!.frontmatter?.title}</h1>
-            <p>{post!.frontmatter?.date}</p>
+          <header className={styles.header}>
+            <h1 itemProp="headline" className={styles.headerTitle}>
+              {post!.frontmatter?.title}
+            </h1>
+            <p className={styles.date}>
+              <BsCalendarFill />
+              {post!.frontmatter?.date}
+            </p>
           </header>
           <section
+            className={styles.articleContent}
             dangerouslySetInnerHTML={{ __html: post!.html! }}
             itemProp="articleBody"
           />
-          <hr />
           <footer>
-            <Bio />
+            <Link to="/blogs" className={styles.link}>
+              <FaArrowCircleLeft className="text-lg" />
+              <span>記事一覧に戻る</span>
+            </Link>
           </footer>
         </article>
-        <nav className="blog-post-nav">
-          <ul
-            style={{
-              display: `flex`,
-              flexWrap: `wrap`,
-              justifyContent: `space-between`,
-              listStyle: `none`,
-              padding: 0,
-            }}
-          >
-            <li>
-              {previous && (
-                <Link to={previous!.fields!.slug!} rel="prev">
-                  ← {previous!.frontmatter!.title}
-                </Link>
-              )}
-            </li>
-            <li>
-              {next && (
-                <Link to={next!.fields!.slug!} rel="next">
-                  {next!.frontmatter!.title} →
-                </Link>
-              )}
-            </li>
-          </ul>
-        </nav>
       </Layout>
     )
   }
@@ -68,11 +52,7 @@ const BlogPostTemplate: React.FC<PageProps<GatsbyTypes.BlogPostBySlugQuery>> =
 export default BlogPostTemplate
 
 export const pageQuery = graphql`
-  query BlogPostBySlug(
-    $id: String!
-    $previousPostId: String
-    $nextPostId: String
-  ) {
+  query BlogPostBySlug($id: String!) {
     site {
       siteMetadata {
         title
@@ -86,22 +66,6 @@ export const pageQuery = graphql`
         title
         date(formatString: "YYYY/MM/DD")
         description
-      }
-    }
-    previous: markdownRemark(id: { eq: $previousPostId }) {
-      fields {
-        slug
-      }
-      frontmatter {
-        title
-      }
-    }
-    next: markdownRemark(id: { eq: $nextPostId }) {
-      fields {
-        slug
-      }
-      frontmatter {
-        title
       }
     }
   }

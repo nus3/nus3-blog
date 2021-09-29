@@ -1,5 +1,5 @@
 .wrap {
-  @apply flex flex-col gap-5 pt-10 max-w-5xl;
+  @apply flex flex-col gap-5 pt-10 max-w-4xl;
 }
 
 .article {
