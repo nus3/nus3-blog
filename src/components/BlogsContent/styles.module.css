@@ -1,0 +1,25 @@
+.wrap {
+  @apply flex flex-col gap-5 pt-10 max-w-5xl;
+}
+
+.article {
+  @apply flex flex-col gap-1;
+}
+
+.title {
+  transition: color 0.3s ease;
+  @apply text-3xl text-primary font-bold;
+
+  &:hover {
+    @apply text-primaryLight;
+  }
+}
+
+.link {
+  transition: color 0.3s ease;
+  @apply text-xs text-textDark;
+}
+
+.date {
+  @apply flex items-center gap-1 mt-1 text-textDark;
+}
