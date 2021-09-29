@@ -41,13 +41,13 @@ export const Layout: React.FC<LayoutProps> = ({
       <header className={styles.header}>
         {header}
         <div className="flex gap-5 items-center">
-          <a href={twitterUrl}>
+          <a href={twitterUrl} target="_blank" rel="noreferrer noopener">
             <FaTwitter
               className={styles.headerIcon}
               title="Twitterのアイコン"
             />
           </a>
-          <a href={githubUrl}>
+          <a href={githubUrl} target="_blank" rel="noreferrer noopener">
             <FaGithubAlt
               className={styles.headerIcon}
               title="GitHubのアイコン"

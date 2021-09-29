@@ -13,7 +13,7 @@ const BlogIndex: React.FC<PageProps<GatsbyTypes.BlogIndexQuery>> = ({
   const siteTitle = data?.site?.siteMetadata?.title || `Title`
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title="All posts" />
+      <Seo title="blogs" />
       <BlogsContent allMarkdownRemark={data.allMarkdownRemark} />
     </Layout>
   )
