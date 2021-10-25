@@ -10,14 +10,25 @@ import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
 
+// HACK:(nus3) requireしてるとこ
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const ogpImage = require('../images/ogp/default-ogp.png')
+
 type SeoProps = {
   description?: string
   lang?: string
   meta?: HTMLMetaElement[]
   title: string
+  ogpSrc?: string
 }
 
-const Seo: React.FC<SeoProps> = ({ description, lang, meta, title }) => {
+const Seo: React.FC<SeoProps> = ({
+  description,
+  lang,
+  meta,
+  title,
+  ogpSrc,
+}) => {
   const { site } = useStaticQuery<GatsbyTypes.SeoQuery>(
     graphql`
       query Seo {
@@ -28,6 +39,7 @@ const Seo: React.FC<SeoProps> = ({ description, lang, meta, title }) => {
             social {
               twitter
             }
+            siteUrl
           }
         }
       }
@@ -36,6 +48,8 @@ const Seo: React.FC<SeoProps> = ({ description, lang, meta, title }) => {
 
   const metaDescription = description || site!.siteMetadata!.description
   const defaultTitle = site?.siteMetadata?.title
+  const siteUrl = site?.siteMetadata?.siteUrl
+  const ogp = ogpSrc ? `${siteUrl}${ogpSrc}` : `${siteUrl}${ogpImage}`
 
   return (
     <Helmet
@@ -62,8 +76,12 @@ const Seo: React.FC<SeoProps> = ({ description, lang, meta, title }) => {
           content: `website`,
         },
         {
+          property: `og:image`,
+          content: ogp,
+        },
+        {
           name: `twitter:card`,
-          content: `summary`,
+          content: `summary_large_image`,
         },
         {
           name: `twitter:creator`,

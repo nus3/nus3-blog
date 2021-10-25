@@ -18,6 +18,7 @@ const BlogPostTemplate: React.FC<PageProps<GatsbyTypes.BlogPostBySlugQuery>> =
         <Seo
           title={post!.frontmatter!.title!}
           description={post!.frontmatter?.description || post!.excerpt}
+          ogpSrc={post?.frontmatter?.hero?.childImageSharp?.fluid?.src}
         />
         <article
           className={styles.article}
@@ -66,6 +67,13 @@ export const pageQuery = graphql`
         title
         date(formatString: "YYYY/MM/DD")
         description
+        hero {
+          childImageSharp {
+            fluid(maxWidth: 1280) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }

@@ -38,6 +38,13 @@ export const pageQuery = graphql`
           date(formatString: "YYYY/MM/DD")
           title
           description
+          hero {
+            childImageSharp {
+              fluid(maxWidth: 1280) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
         }
       }
     }
