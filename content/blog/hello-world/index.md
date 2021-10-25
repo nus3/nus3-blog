@@ -2,6 +2,7 @@
 title: スタイリング確認用
 date: '2021-09-29'
 description: '記事のスタイリングを確認するためのものです。気にしないでください'
+hero: ./ogp.png
 ---
 
 この記事は[gatsby-starter-blog](https://www.gatsbyjs.com/starters/gatsbyjs/gatsby-starter-blog)からnus3が意図した通りにスタイリングを調整できてるか確認するためのものです。  

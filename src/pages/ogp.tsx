@@ -18,9 +18,10 @@ const Ogp: React.FC<PageProps<GatsbyTypes.OgpQuery>> = ({ location, data }) => {
   const [src, setSrc] = React.useState<string | null>(null)
 
   // NOTE:(nus3) 毎回OGP作るときはここの文字を変えるっていう泥臭い運用なのヨ！
-  const title = `長いタイトル長いタイトル長い
-タイトル長いタイトル長いタイ
-トル長い`
+  //   const title = `長いタイトル長いタイトル長い
+  // タイトル長いタイトル長いタイ
+  // トル長い`
+  const title = `スタイリング確認用`
 
   React.useEffect(() => {
     const elem = document.createElement('canvas')
@@ -56,8 +57,8 @@ const Ogp: React.FC<PageProps<GatsbyTypes.OgpQuery>> = ({ location, data }) => {
       ctx.fillText(line, PADDING_LEFT, paddingTop)
     })
 
+    // HACK:(nus3) ここを更新しないとフォントが当たらない問題
     ctx.font = '34px Lato'
-    ctx.textAlign = 'left'
     ctx.fillStyle = '#4ECCA3'
     ctx.fillText('nus3 Blog', 430, 280)
 
