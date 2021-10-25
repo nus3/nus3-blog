@@ -40,7 +40,7 @@ export const BlogsContent: React.FC<BlogsContentProps> = ({
                   {post.frontmatter!.date}
                 </p>
               </header>
-              <section className={styles.description}>
+              <section>
                 <p
                   className="text-lg"
                   dangerouslySetInnerHTML={{
