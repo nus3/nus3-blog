@@ -18,10 +18,9 @@ const Ogp: React.FC<PageProps<GatsbyTypes.OgpQuery>> = ({ location, data }) => {
   const [src, setSrc] = React.useState<string | null>(null)
 
   // NOTE:(nus3) 毎回OGP作るときはここの文字を変えるっていう泥臭い運用なのヨ！
-  //   const title = `長いタイトル長いタイトル長い
-  // タイトル長いタイトル長いタイ
-  // トル長い`
-  const title = `スタイリング確認用`
+  const title = `長いタイトル長いタイトル長い
+  タイトル長いタイトル長いタイ
+  トル長い`
 
   React.useEffect(() => {
     const elem = document.createElement('canvas')
