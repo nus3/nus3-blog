@@ -16,7 +16,7 @@ const NotFoundPage: React.FC<PageProps<GatsbyTypes.NotFoundQuery>> = ({
       <Seo title="404: Not Found" />
       <section className="flex flex-col gap-5 justify-center items-center h-full w-full">
         <h1 className="font-bold text-accentYellow text-9xl">404</h1>
-        <p className="text-xl">{`ページがみつかんない _:(´ཀ\`」 ∠):`}</p>
+        <p className="text-xl">{`ページがみつからへん _:(´ཀ\`」 ∠):`}</p>
         <Link
           to="/blogs"
           className="flex gap-1 items-center text-primary hover:text-primaryLight transition-colors duration-300"

@@ -24,6 +24,7 @@ module.exports = {
       accentYellow: '#FFD369',
       bgBase: '#222831',
       bgHeader: '#393E46',
+      bgCode: '#17202D',
       textBase: '#EEEEEE',
       textDark: '#C0C0C0',
     },

@@ -18,7 +18,7 @@ export const Layout: React.FC<LayoutProps> = ({
 }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
-  const twitterUrl = 'https://twitter.com/YotaHada3'
+  const twitterUrl = 'https://twitter.com/nus3_'
   const githubUrl = 'https://github.com/nus3'
 
   let header
