@@ -7,7 +7,7 @@
 }
 
 .headerTitle {
-  @apply text-3xl md:text-5xl font-bold;
+  @apply text-3xl md:text-5xl md:leading-tight font-bold;
 }
 
 .date {
@@ -119,6 +119,10 @@
   }
 
   p > strong {
+    @apply text-accentYellow;
+  }
+
+  li > strong {
     @apply text-accentYellow;
   }
 
