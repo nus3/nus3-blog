@@ -11,11 +11,7 @@ type LayoutProps = {
   location: WindowLocation<unknown>
 }
 
-export const Layout: React.FC<LayoutProps> = ({
-  location,
-  title,
-  children,
-}) => {
+export const Layout: React.FC<LayoutProps> = ({ location, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
   const twitterUrl = 'https://twitter.com/nus3_'
@@ -25,13 +21,31 @@ export const Layout: React.FC<LayoutProps> = ({
   if (isRootPath) {
     header = (
       <h1 className={styles.headerTitle}>
-        <Link to="/">{title}</Link>
+        <Link to="/">
+          <StaticImage
+            className="bio-avatar"
+            layout="fixed"
+            formats={['auto', 'webp', 'avif']}
+            src="../../images/logo.png"
+            width={130}
+            quality={95}
+            alt="Blog Logo"
+          />
+        </Link>
       </h1>
     )
   } else {
     header = (
       <Link className={styles.headerTitle} to="/">
-        {title}
+        <StaticImage
+          className="bio-avatar"
+          layout="fixed"
+          formats={['auto', 'webp', 'avif']}
+          src="../../images/logo.png"
+          width={130}
+          quality={95}
+          alt="Blog Logo"
+        />
       </Link>
     )
   }
