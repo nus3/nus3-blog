@@ -27,7 +27,7 @@ export const Layout: React.FC<LayoutProps> = ({ location, children }) => {
             layout="fixed"
             formats={['auto', 'webp', 'avif']}
             src="../../images/logo.png"
-            width={130}
+            width={138}
             quality={95}
             alt="Blog Logo"
           />
@@ -42,7 +42,7 @@ export const Layout: React.FC<LayoutProps> = ({ location, children }) => {
           layout="fixed"
           formats={['auto', 'webp', 'avif']}
           src="../../images/logo.png"
-          width={130}
+          width={138}
           quality={95}
           alt="Blog Logo"
         />
