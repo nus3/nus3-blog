@@ -12,7 +12,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 
 // HACK:(nus3) requireしてるとこ
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const ogpImage = require('../images/ogp/default-ogp.png')
+const ogpImage = require('../images/ogp/ogp.png')
 
 type SeoProps = {
   description?: string

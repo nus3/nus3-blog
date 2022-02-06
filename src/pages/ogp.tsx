@@ -4,6 +4,29 @@ import { PageProps, graphql } from 'gatsby'
 
 import { Layout } from '../components/Layout'
 import Seo from '../components/seo'
+import OgpImage from '../images/ogp/ogp.png'
+
+const loadImage = (src: string) => {
+  return new Promise<HTMLImageElement>((resolve, reject) => {
+    const image = new Image()
+
+    function cleanup() {
+      image.onload = null
+      image.onerror = null
+    }
+
+    image.onload = () => {
+      cleanup()
+      resolve(image)
+    }
+    image.onerror = (err) => {
+      cleanup()
+      reject(err)
+    }
+
+    image.src = src
+  })
+}
 
 const Ogp: React.FC<PageProps<GatsbyTypes.OgpQuery>> = ({ location, data }) => {
   const siteTitle = data?.site?.siteMetadata?.title || `Title`
@@ -18,50 +41,55 @@ const Ogp: React.FC<PageProps<GatsbyTypes.OgpQuery>> = ({ location, data }) => {
   const [src, setSrc] = React.useState<string | null>(null)
 
   // NOTE:(nus3) 毎回OGP作るときはここの文字を変えるっていう泥臭い運用なのヨ！
-  const title = `長いタイトル長いタイトル長い
-  タイトル長いタイトル長いタイ
-  トル長い`
+  const title = `ゲッポー 2022年01月`
 
   React.useEffect(() => {
-    const elem = document.createElement('canvas')
+    const createCanvas = async () => {
+      const elem = document.createElement('canvas')
 
-    const dpr = window.devicePixelRatio || 1
+      const dpr = window.devicePixelRatio || 1
 
-    elem.width = WIDTH
-    elem.height = HEIGHT
+      elem.width = WIDTH
+      elem.height = HEIGHT
 
-    const ctx = elem.getContext('2d')
+      const ctx = elem.getContext('2d')
 
-    if (!ctx) return
+      if (!ctx) return
 
-    ctx.scale(dpr, dpr)
+      const image = await loadImage(OgpImage)
+      ctx.drawImage(image, 0, 0, WIDTH, HEIGHT)
 
-    ctx.clearRect(0, 0, WIDTH, HEIGHT)
-    ctx.fillStyle = '#222831'
-    ctx.fillRect(0, 0, WIDTH, HEIGHT)
+      ctx.scale(dpr, dpr)
 
-    ctx.font = 'bold 40px Noto Sans JP'
-    ctx.textAlign = 'left'
-    ctx.fillStyle = '#FFD369'
+      // ctx.clearRect(0, 0, WIDTH, HEIGHT)
+      // ctx.fillStyle = '#222831'
+      // ctx.fillRect(0, 0, WIDTH, HEIGHT)
 
-    const lines = title.split('\n')
-    lines.forEach((line, index) => {
-      if (index === 0) {
-        ctx.fillText(line, PADDING_LEFT, PADDING_TOP)
-        return
-      }
+      ctx.font = 'bold 40px Noto Sans JP'
+      ctx.textAlign = 'left'
+      ctx.fillStyle = '#4ECCA3'
 
-      const paddingTop = TITLE_SIZE * LINE_HEIGHT * index + PADDING_TOP
-      console.log(paddingTop)
-      ctx.fillText(line, PADDING_LEFT, paddingTop)
-    })
+      const lines = title.split('\n')
+      lines.forEach((line, index) => {
+        if (index === 0) {
+          ctx.fillText(line, PADDING_LEFT, PADDING_TOP)
+          return
+        }
 
-    // HACK:(nus3) ここを更新しないとフォントが当たらない問題
-    ctx.font = '34px Lato'
-    ctx.fillStyle = '#4ECCA3'
-    ctx.fillText('nus3 Blog', 430, 280)
+        const paddingTop = TITLE_SIZE * LINE_HEIGHT * index + PADDING_TOP
+        console.log(paddingTop)
+        ctx.fillText(line, PADDING_LEFT, paddingTop)
+      })
 
-    setSrc(elem.toDataURL())
+      // HACK:(nus3) ここを更新しないとフォントが当たらない問題
+      // ctx.font = '34px Lato'
+      // ctx.fillStyle = '#4ECCA3'
+      // ctx.fillText('nus3 Blog', 430, 280)
+
+      setSrc(elem.toDataURL())
+    }
+
+    createCanvas()
   }, [])
 
   return (
