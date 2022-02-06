@@ -16,7 +16,7 @@ hero: ./ogp.png
 
 ## 作ったもの
 
-ヾﾉﾟｪﾟ\*)ﾅｲﾅｲ
+- [このブログの OGP にロゴを追加](https://github.com/nus3/nus3-blog/pull/23/commits/cab61c9e187c749c68ef58750d0c1584be5c1c15)
 
 ## 読んだもの
 
