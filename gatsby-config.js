@@ -137,5 +137,12 @@ module.exports = {
     // `gatsby-plugin-offline`,
     `gatsby-plugin-typegen`,
     `gatsby-plugin-postcss`,
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`lato: 400,700`, `noto sans jp: 400,700`],
+        display: 'optional',
+      },
+    },
   ],
 }
