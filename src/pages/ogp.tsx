@@ -41,7 +41,7 @@ const Ogp: React.FC<PageProps<GatsbyTypes.OgpQuery>> = ({ location, data }) => {
   const [src, setSrc] = React.useState<string | null>(null)
 
   // NOTE:(nus3) 毎回OGP作るときはここの文字を変えるっていう泥臭い運用なのヨ！
-  const title = `ゲッポー 2022年01月`
+  const title = `ゲッポー 2022年02月`
 
   React.useEffect(() => {
     const createCanvas = async () => {
@@ -61,10 +61,6 @@ const Ogp: React.FC<PageProps<GatsbyTypes.OgpQuery>> = ({ location, data }) => {
 
       ctx.scale(dpr, dpr)
 
-      // ctx.clearRect(0, 0, WIDTH, HEIGHT)
-      // ctx.fillStyle = '#222831'
-      // ctx.fillRect(0, 0, WIDTH, HEIGHT)
-
       ctx.font = 'bold 40px Noto Sans JP'
       ctx.textAlign = 'left'
       ctx.fillStyle = '#4ECCA3'
@@ -80,11 +76,6 @@ const Ogp: React.FC<PageProps<GatsbyTypes.OgpQuery>> = ({ location, data }) => {
         console.log(paddingTop)
         ctx.fillText(line, PADDING_LEFT, paddingTop)
       })
-
-      // HACK:(nus3) ここを更新しないとフォントが当たらない問題
-      // ctx.font = '34px Lato'
-      // ctx.fillStyle = '#4ECCA3'
-      // ctx.fillText('nus3 Blog', 430, 280)
 
       setSrc(elem.toDataURL())
     }
