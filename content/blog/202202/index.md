@@ -62,4 +62,4 @@ DFM が圧倒的なんだけども、CGA、RJ、AXIZ あたりも普通に見て
 
 ## 最後に
 
-[Twitter](https://twitter.com/nus3_/status/1499666944131465217?s=20&t=UPIH3jyOdR7gh_mRbBUAzw)にも書いたんだけども、先日のサイボウズでの中途入社研修がよくてモチベが上がった、上がったモチベで LOL をする(チガウ)
+[Twitter](https://twitter.com/nus3_/status/1499666944131465217?s=20&t=UPIH3jyOdR7gh_mRbBUAzw)にも書いたんだけども、先日のサイボウズでの中途入社研修がよくてモチベが上がった。上がったモチベで お仕事もプライベートも LOL も楽しくやってこ
