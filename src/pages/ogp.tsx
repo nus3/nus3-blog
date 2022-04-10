@@ -41,7 +41,7 @@ const Ogp: React.FC<PageProps<GatsbyTypes.OgpQuery>> = ({ location, data }) => {
   const [src, setSrc] = React.useState<string | null>(null)
 
   // NOTE:(nus3) 毎回OGP作るときはここの文字を変えるっていう泥臭い運用なのヨ！
-  const title = `ゲッポー 2022年02月`
+  const title = `ゲッポー 2022年03月`
 
   React.useEffect(() => {
     const createCanvas = async () => {
