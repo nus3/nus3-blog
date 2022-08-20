@@ -19,6 +19,7 @@ hero: ./ogp.png
 
 何か感想とかあれば`#kanzenrikaichan`で呟いてもらえると嬉しみどす
 
+- [Cloudflare / CDN / Workers について](https://stand.fm/episodes/62bfa1357ce7cd00067557d3)
 - [HTTP/3 のハンドシェイクについて](https://stand.fm/episodes/62d65cc89377488bb871cdb8)
 - [HTTP/3 の優先度制御・サーバプッシュについて](https://stand.fm/episodes/62dc8ce3af95923291bb95de)
 - [HTTP/3 回を終えて エンジニアのアウトプット](https://stand.fm/episodes/62e0ad4dd3139829ded7f682)
