@@ -1,0 +1,32 @@
+---
+export interface Props {
+  post: CollectionEntry<'posts'>
+}
+
+import { Container } from "../../components/Container/index.jsx"
+import { Article } from "../../components/Article/index.jsx"
+import Layout from "../../components/Layout.astro"
+import dayjs from "dayjs"
+import { getCollection, CollectionEntry } from 'astro:content'
+
+export const getStaticPaths = async () => {
+  const posts = await getCollection('posts')
+
+  return posts?.map(post => ({
+    params: { slug: post.slug },
+    props: { post },
+  }))
+}
+
+const { post } = Astro.props
+const date = dayjs(post.data.date).format("YYYY/MM/DD")
+const { Content } = await post.render()
+---
+
+<Layout title="nus3 blog">
+  <Container>
+    <Article date={date} title={post.data.title}>
+      <Content></Content>
+    </Article>
+  </Container>
+</Layout>
