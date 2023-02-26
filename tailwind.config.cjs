@@ -1,5 +1,14 @@
 module.exports = {
   mode: 'jit',
+  purge: {
+    content: ['./src/components/**/*.tsx'],
+    options: {
+      // https://purgecss.com/safelisting.html#patterns
+      safelist: {
+        standard: [/^bg-/, /^text-/, /^border-/],
+      },
+    },
+  },
   darkMode: false, // or 'media' or 'class'
   theme: {
     fontFamily: {

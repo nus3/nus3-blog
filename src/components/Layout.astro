@@ -1,13 +1,12 @@
 ---
-import "../styles/base.css";
+import "../styles/base.css"
 
 export interface Props {
   title: string
 }
 const { title } = Astro.props
 
-const description =
-  "nus3のブログです"
+const description = "nus3のブログです"
 const author = "nus3_"
 const site = Astro.site?.toString() || ""
 const ogImage = `${site}/images/logo.png`

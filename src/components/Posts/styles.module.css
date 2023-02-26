@@ -9,10 +9,10 @@
 .title {
   transition: color 0.3s ease;
   @apply text-3xl text-primary font-bold;
+}
 
-  &:hover {
-    @apply text-primaryLight;
-  }
+.title:hover {
+  @apply text-primaryLight;
 }
 
 .link {

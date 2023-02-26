@@ -19,19 +19,17 @@
 .headerTitle {
   transition: color 0.3s ease;
   @apply text-4xl font-bold text-primary;
-
-  &:hover {
-    @apply text-primaryLight;
-  }
+}
+.headerTitle:hover {
+  @apply text-primaryLight;
 }
 
 .headerIcon {
   transition: color 0.3s ease;
   @apply text-3xl text-primary;
-
-  &:hover {
-    @apply text-primaryLight;
-  }
+}
+.headerIcon:hover {
+  @apply text-primaryLight;
 }
 
 .mainContainer {

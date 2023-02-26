@@ -17,10 +17,10 @@
 .link {
   transition: color 0.3s ease;
   @apply flex gap-1 items-center w-44 p-3 pl-0 text-primary;
+}
 
-  &:hover {
-    @apply text-primaryLight;
-  }
+.link:hover {
+  @apply text-primaryLight;
 }
 
 .content {
@@ -124,11 +124,14 @@
 .content a {
   transition: color 0.3s ease;
   @apply text-primary underline;
+}
 
-  &:hover,
-  &:focus {
-    @apply text-primaryLight;
-  }
+.content a:hover {
+  @apply text-primaryLight;
+}
+
+.content a:focus {
+  @apply text-primaryLight;
 }
 
 /* HACK:(nus3) シンタックスハイライトにはoverflowを効かせたい */
