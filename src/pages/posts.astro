@@ -7,7 +7,7 @@ import { BlogsContent } from "../components/Posts/index.jsx";
 
 const posts = await getCollection('posts');
 const contents = posts.map(post => {
-  const pagePath = `./posts/${post.slug}`
+  const pagePath = `/posts/${post.slug}`
   const date = dayjs(post.data.date).format("YYYY/MM/DD")
   const title = post.data.title
   const description = post.data.description
