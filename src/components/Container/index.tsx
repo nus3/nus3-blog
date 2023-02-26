@@ -1,25 +1,20 @@
-/* eslint-disable react/react-in-jsx-scope */
 import type { ReactNode, FC } from 'react'
+import { FaTwitter, FaGithubAlt } from 'react-icons/fa'
 import * as styles from './styles.module.css'
 import '../../styles/base.css'
 
-type LayoutProps = {
+type ContainerProps = {
   children: ReactNode
 }
 
-const Layout: FC<LayoutProps> = ({ children }) => {
+export const Container: FC<ContainerProps> = ({ children }) => {
   const twitterUrl = 'https://twitter.com/nus3_'
   const githubUrl = 'https://github.com/nus3'
 
   const header = (
     <h1 className={styles.headerTitle}>
       <a href="/">
-        <img
-          className="bio-avatar"
-          src="../../images/logo.png"
-          width={138}
-          alt="Blog Logo"
-        />
+        <img src="../../images/logo.png" width={138} alt="Blog Logo" />
       </a>
     </h1>
   )
@@ -28,12 +23,18 @@ const Layout: FC<LayoutProps> = ({ children }) => {
     <div className={styles.container}>
       <header className={styles.header}>
         {header}
-        <div className="flex items-center gap-5">
+        <div className={styles.icons}>
           <a href={twitterUrl} target="_blank" rel="noreferrer noopener">
-            twitter
+            <FaTwitter
+              className={styles.headerIcon}
+              title="Twitterのアイコン"
+            />
           </a>
           <a href={githubUrl} target="_blank" rel="noreferrer noopener">
-            github
+            <FaGithubAlt
+              className={styles.headerIcon}
+              title="GitHubのアイコン"
+            />
           </a>
         </div>
       </header>
@@ -51,5 +52,3 @@ const Layout: FC<LayoutProps> = ({ children }) => {
     </div>
   )
 }
-
-export default Layout

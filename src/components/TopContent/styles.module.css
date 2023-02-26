@@ -1,0 +1,27 @@
+.wrap {
+  @apply flex flex-col sm:flex-row items-center justify-center sm:justify-start gap-12 sm:gap-20 h-full;
+}
+
+.list {
+  @apply flex flex-col gap-1;
+}
+
+.link {
+  @apply flex items-center justify-center gap-2 p-4 w-40 bg-primary rounded bg-opacity-60 border border-primary;
+
+  &:hover {
+    @apply bg-opacity-80;
+  }
+}
+
+.labelWrap {
+  @apply flex gap-2 items-baseline;
+}
+
+.menuLabel {
+  @apply text-4xl font-bold;
+}
+
+.menuIcon {
+  @apply text-2xl;
+}
