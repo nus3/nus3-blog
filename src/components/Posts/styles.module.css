@@ -23,3 +23,7 @@
 .date {
   @apply flex items-center gap-1 mt-1 text-textDark;
 }
+
+.calendar {
+  width: 16px;
+}

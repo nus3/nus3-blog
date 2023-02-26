@@ -27,6 +27,15 @@
   @apply flex flex-col;
 }
 
+.calendar {
+  width: 16px;
+}
+
+.arrow {
+  width: 16px;
+}
+
+
 
 /* --------------------  以下markdownのスタイル  -------------------- */
 .content :where(h1, h2, h3, h4, h5, h6) {

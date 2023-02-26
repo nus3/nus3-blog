@@ -14,7 +14,7 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '14.17.6'
+          node-version-file: '.node-version'
       - name: Cache node modules
         uses: actions/cache@v2
         env:

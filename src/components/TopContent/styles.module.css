@@ -22,5 +22,6 @@
 }
 
 .menuIcon {
+  width: 24px;
   @apply text-2xl;
 }

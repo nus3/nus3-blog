@@ -1,7 +1,8 @@
 import type { FC } from 'react'
-import { BiLinkExternal } from 'react-icons/bi'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import * as styles from './styles.module.css'
+import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 
 export const TopContent: FC = () => {
   const zennUrl = 'https://zenn.dev/nus3'
@@ -17,7 +18,8 @@ export const TopContent: FC = () => {
         >
           <span className={styles.labelWrap}>
             <span className={styles.menuLabel}>Zenn</span>
-            <BiLinkExternal
+            <FontAwesomeIcon
+              icon={faArrowUpRightFromSquare}
               className={styles.menuIcon}
               title="zennへのリンクアイコン"
             />

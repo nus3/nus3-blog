@@ -1,7 +1,10 @@
 import type { ReactNode, FC } from 'react'
-import { FaArrowCircleLeft } from 'react-icons/fa'
-import { BsCalendarFill } from 'react-icons/bs'
 import * as styles from './styles.module.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+  faCalendarDays,
+  faCircleArrowLeft,
+} from '@fortawesome/free-solid-svg-icons'
 
 type ArticleProps = {
   children: ReactNode
@@ -21,14 +24,14 @@ export const Article: FC<ArticleProps> = ({ children, title, date }) => {
           {title}
         </h1>
         <p className={styles.date}>
-          <BsCalendarFill />
+          <FontAwesomeIcon className={styles.calendar} icon={faCalendarDays} />
           {date}
         </p>
       </header>
       <section className={styles.content}>{children}</section>
       <footer>
         <a href="/blogs" className={styles.link}>
-          <FaArrowCircleLeft className="text-lg" />
+          <FontAwesomeIcon className={styles.arrow} icon={faCircleArrowLeft} />
           <span>記事一覧に戻る</span>
         </a>
       </footer>

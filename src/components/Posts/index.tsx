@@ -1,6 +1,7 @@
-import { BsCalendarFill } from 'react-icons/bs'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import * as styles from './styles.module.css'
+import { faCalendarDays } from '@fortawesome/free-solid-svg-icons'
 
 type Post = {
   pagePath: string
@@ -38,7 +39,10 @@ export const BlogsContent: React.FC<BlogsContentProps> = ({ posts }) => {
                   </a>
                 </h2>
                 <p className={styles.date}>
-                  <BsCalendarFill />
+                  <FontAwesomeIcon
+                    className={styles.calendar}
+                    icon={faCalendarDays}
+                  />
                   {post.date}
                 </p>
               </header>

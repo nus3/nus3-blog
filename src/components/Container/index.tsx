@@ -1,5 +1,6 @@
 import type { ReactNode, FC } from 'react'
-import { FaTwitter, FaGithubAlt } from 'react-icons/fa'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTwitter, faGithubAlt } from '@fortawesome/free-brands-svg-icons'
 import * as styles from './styles.module.css'
 import '../../styles/base.css'
 
@@ -25,13 +26,15 @@ export const Container: FC<ContainerProps> = ({ children }) => {
         {header}
         <div className={styles.icons}>
           <a href={twitterUrl} target="_blank" rel="noreferrer noopener">
-            <FaTwitter
+            <FontAwesomeIcon
+              icon={faTwitter}
               className={styles.headerIcon}
               title="Twitterのアイコン"
             />
           </a>
           <a href={githubUrl} target="_blank" rel="noreferrer noopener">
-            <FaGithubAlt
+            <FontAwesomeIcon
+              icon={faGithubAlt}
               className={styles.headerIcon}
               title="GitHubのアイコン"
             />
