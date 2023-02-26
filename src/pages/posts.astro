@@ -1,0 +1,28 @@
+---
+import { Container } from "../components/Container/index.jsx"
+import Layout from "../components/Layout.astro"
+import { getCollection } from 'astro:content';
+import dayjs from "dayjs"
+import { BlogsContent } from "../components/Posts/index.jsx";
+
+const posts = await getCollection('posts');
+const contents = posts.map(post => {
+  const pagePath = `./posts/${post.slug}`
+  const date = dayjs(post.data.date).format("YYYY/MM/DD")
+  const title = post.data.title;
+  const description = post.data.description;
+  const ogp = post.data.hero;
+
+  return { pagePath, title, date, description, ogp }
+}).sort((a, b) =>
+  dayjs(a.date, 'h:mm A').isBefore(dayjs(b.date, 'h:mm A')) ? 1 : -1
+);
+
+---
+
+<Layout title="nus3 blog">
+  <Container>
+    <BlogsContent posts={contents}></BlogsContent>
+  </Container>
+</Layout>
+

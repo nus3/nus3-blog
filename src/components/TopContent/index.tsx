@@ -26,7 +26,7 @@ export const TopContent: FC = () => {
         <p>技術系はこっち</p>
       </li>
       <li className={styles.list}>
-        <a href="/blogs" className={styles.link}>
+        <a href="/posts" className={styles.link}>
           <span className={styles.menuLabel}>Blog</span>
         </a>
         <p>それ以外はこっち</p>
