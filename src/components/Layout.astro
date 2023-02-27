@@ -19,10 +19,11 @@ const site = Astro.site?.toString() || ""
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content={description || "nus3のブログです"} />
-    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:creator" content={author} />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description || "nus3のブログです"} />
+    <meta property="og:type" content="website">
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description || "nus3のブログです"} />
     <meta property="og:type" content="website" />
