@@ -3,13 +3,13 @@ import "../styles/base.css"
 
 export interface Props {
   title: string
+  description?: string
+  ogImage?: string
 }
-const { title } = Astro.props
+const { title, description, ogImage } = Astro.props
 
-const description = "nus3のブログです"
 const author = "nus3_"
 const site = Astro.site?.toString() || ""
-const ogImage = `${site}/images/logo.png`
 ---
 
 
@@ -18,15 +18,15 @@ const ogImage = `${site}/images/logo.png`
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <meta name="description" content={description} />
+    <meta name="description" content={description || "nus3のブログです"} />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:creator" content={author} />
     <meta name="twitter:title" content={title} />
-    <meta name="twitter:description" content={description} />
+    <meta name="twitter:description" content={description || "nus3のブログです"} />
     <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
+    <meta property="og:description" content={description || "nus3のブログです"} />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content={ogImage} />
+    <meta property="og:image" content={ogImage || `${site}/images/logo.png`} />
     <link
       rel="icon"
       type="image/png"

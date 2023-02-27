@@ -2,7 +2,7 @@
 title: ゲッポー 2022年06月
 date: '2022-07-16'
 description: '2022年6月の月報です'
-hero: ./ogp.png
+hero: '/posts/202206/ogp.png'
 ---
 
 2022 年 6 月のふりかえり

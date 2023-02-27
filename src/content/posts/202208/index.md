@@ -2,7 +2,7 @@
 title: ゲッポー 2022年08月
 date: '2022-09-25'
 description: '2022年8月の月報です'
-hero: ./ogp.png
+hero: '/posts/202208/ogp.png'
 ---
 
 2022 年 8 月のふりかえり

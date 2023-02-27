@@ -2,7 +2,7 @@
 title: ゲッポー 2022年01月
 date: '2022-02-06'
 description: '2022年1月の月報です'
-hero: ./ogp.png
+hero: '/posts/202201/ogp.png'
 ---
 
 2022 年 1 月のふりかえり

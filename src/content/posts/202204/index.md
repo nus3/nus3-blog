@@ -2,7 +2,7 @@
 title: ゲッポー 2022年04月
 date: '2022-05-15'
 description: '2022年4月の月報です'
-hero: ./ogp.png
+hero: '/posts/202204/ogp.png'
 ---
 
 2022 年 4 月のふりかえり

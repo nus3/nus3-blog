@@ -23,7 +23,7 @@ const date = dayjs(post.data.date).format("YYYY/MM/DD")
 const { Content } = await post.render()
 ---
 
-<Layout title="nus3 blog">
+<Layout title={`${post.data.title} | nus3 blog`} description={post.data.description} ogImage={post.data.hero}>
   <Container>
     <Article date={date} title={post.data.title}>
       <Content></Content>

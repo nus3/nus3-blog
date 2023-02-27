@@ -2,7 +2,7 @@
 title: ゲッポー 2021年11月
 date: '2021-11-28'
 description: '2021年11月の月報です'
-hero: ./ogp.png
+hero: '/posts/202111/ogp.png'
 ---
 
 2021 年 11 月のふりかえり
