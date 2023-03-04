@@ -8,10 +8,9 @@
 
 .link {
   @apply flex items-center justify-center gap-2 p-4 w-40 bg-primary rounded bg-opacity-60 border border-primary;
-
-  &:hover {
-    @apply bg-opacity-80;
-  }
+}
+.link:hover {
+  @apply bg-opacity-80;
 }
 
 .labelWrap {
@@ -23,5 +22,6 @@
 }
 
 .menuIcon {
+  width: 24px;
   @apply text-2xl;
 }

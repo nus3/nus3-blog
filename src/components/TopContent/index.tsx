@@ -1,10 +1,10 @@
-import * as React from 'react'
-import { Link } from 'gatsby'
-import { BiLinkExternal } from 'react-icons/bi'
+import type { FC } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import * as styles from './styles.module.css'
+import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 
-export const TopContent: React.FC = () => {
+export const TopContent: FC = () => {
   const zennUrl = 'https://zenn.dev/nus3'
 
   return (
@@ -18,7 +18,8 @@ export const TopContent: React.FC = () => {
         >
           <span className={styles.labelWrap}>
             <span className={styles.menuLabel}>Zenn</span>
-            <BiLinkExternal
+            <FontAwesomeIcon
+              icon={faArrowUpRightFromSquare}
               className={styles.menuIcon}
               title="zennへのリンクアイコン"
             />
@@ -27,9 +28,9 @@ export const TopContent: React.FC = () => {
         <p>技術系はこっち</p>
       </li>
       <li className={styles.list}>
-        <Link to="/blogs" className={styles.link}>
+        <a href="/posts" className={styles.link}>
           <span className={styles.menuLabel}>Blog</span>
-        </Link>
+        </a>
         <p>それ以外はこっち</p>
       </li>
     </ul>

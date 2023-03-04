@@ -1,0 +1,7 @@
+.wrapper {
+  @apply flex flex-col pt-5;
+}
+
+.ogpCanvas {
+  @apply flex bg-bgHeader p-5;
+}

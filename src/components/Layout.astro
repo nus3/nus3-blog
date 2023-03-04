@@ -1,0 +1,44 @@
+---
+import "../styles/base.css"
+
+export interface Props {
+  title: string
+  description?: string
+  ogImage?: string
+}
+const { title, description, ogImage } = Astro.props
+
+const author = "nus3_"
+const site = Astro.site?.toString() || ""
+---
+
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description || "nus3のブログです"} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content={author} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description || "nus3のブログです"} />
+    <meta property="og:type" content="website">
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description || "nus3のブログです"} />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content={ogImage || `${site}/images/logo.png`} />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/profile-pic.png"
+    />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+
+  <body>
+    <slot />
+  </body>
+</html>
