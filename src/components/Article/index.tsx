@@ -30,7 +30,7 @@ export const Article: FC<ArticleProps> = ({ children, title, date }) => {
       </header>
       <section className={styles.content}>{children}</section>
       <footer>
-        <a href="./" className={styles.link}>
+        <a href="/posts" className={styles.link}>
           <FontAwesomeIcon className={styles.arrow} icon={faCircleArrowLeft} />
           <span>記事一覧に戻る</span>
         </a>
