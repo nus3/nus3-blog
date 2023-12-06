@@ -2,7 +2,7 @@
 title: 1年経ったが、お前はフロントエンドエキスパートになれたのか
 date: '2023-03-21'
 description: '2022年の振り返り'
-hero: '/posts/2022-review/ogp.png'
+hero: '/posts/2022-review/ogp_.png'
 ---
 
 気づけばサイボウズのフロントエンドエキスパートチームに入って 1 年以上経っていた。
