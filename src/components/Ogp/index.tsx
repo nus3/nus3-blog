@@ -35,10 +35,8 @@ export const Ogp: FC = () => {
   const [src, setSrc] = useState<string | null>(null)
 
   // NOTE:(nus3) 毎回OGP作るときはここの文字を変えるっていう泥臭い運用なのヨ！
-  const title = `1年経ったが、お前は
-フロントエンドエキスパートに
-なれたのか
-`
+  const title = `2023年の活動を
+LoLに例えてふりかえる`
 
   useEffect(() => {
     const createCanvas = async () => {
